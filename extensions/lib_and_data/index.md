@@ -11,14 +11,14 @@ These pages aim to provide informal specification for all lib keys and data file
 This documentation effort only concerns versions 4+ of Designspace and 3+ of UFO.
 
 {% for lib_and_data in site.lib_and_data %}
-<h2><a href="{{ lib_and_data.url }}">{{ lib_and_data.title }}</a></h2>
+<h2><a href="{{ lib_and_data.url | relative_url }}">{{ lib_and_data.title }}</a></h2>
 
 <p>{{ lib_and_data.summary }}</p>
 
 <ul>
 {% for key in lib_and_data.lib_and_data_keys %}
     <li>
-    <a href="{{ lib_and_data.url }}#{{ key.location | slugify }}_{{ key.name | slugify }}">
+    <a href="{{ lib_and_data.url | relative_url }}#{{ key.location | slugify }}_{{ key.name | slugify }}">
         <code>{{ key.name }}</code>
     </a>
     </li>
