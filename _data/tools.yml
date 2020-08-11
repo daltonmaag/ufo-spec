@@ -1,0 +1,5 @@
+- name: fontParts
+  type:
+- name: fontmake
+  type: compiler
+  url: https://github.com/googlefonts/fontmake
